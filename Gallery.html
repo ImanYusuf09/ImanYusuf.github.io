@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iman Yusuf</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+<!-- Icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="anya-32x32.png">
+	
+<style>
+body,h1 {font-family: "Georgia", serif}
+body, html {height: 10%}
+.bgimg {
+  background : url('gif2.gif');
+  min-height: 100%;
+  background-position: top;
+  background-size: contain;
+}
+	</style>
+
+<!--navbar-->
+<style>
+	
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+	
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+	
+</style>
+	
+<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+	
+<!--dropdown-->
+<style>
+.dropbtn {
+  background-color: #181b1f;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9fb6c9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+	
+</head>
+	
+<body>
+	
+	<!--navbar-->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-xlarge"
+  onclick="w3_close()">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  
+	<div class="dropdown">
+  <a href="About2.html" class="w3-bar-item w3-button">About</a>
+     <div class="dropdown-content">
+     <a href="About2.html#Biodata">Biodata</a>
+     <a href="About2.html#Education">Education</a>
+     <a href="About2.html#Fun Facts">Fun Facts</a>
+    </div>
+</div>
+	
+   <a href="Gallery.html" class="w3-bar-item w3-button">Gallery</a>
+	
+  <a href="Feedback.html" class="w3-bar-item w3-button">Feedback</a>
+</div>
+
+<div id="main">
+	
+<div class="w3-black">
+  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+ </div>
+</div>
+</div>
+	
+	<a class="w3-display-container w3-content w3-center" style="max-width:1500px"></a>
+<img src="sky.jpg" alt="sky" width="1500" height="600">
+	<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Gallery</h1>
+    <h3 class="w3-hide-medium w3-hide-small">Moment Captured</h3>
+  </div>
+	
+	<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top" id="gallery">
+
+  <!-- Images -->
+  <img src="sky1.jpg" alt="sky1" width="500" height="400">
+  <img src="sky2.jpg" alt="sky2" class="w3-margin-left" width="400" height="400">
+  <img src="sky3.jpg" alt="sky3" class="w3-margin-top" width="300" height="400">
+  <img src="sky5.jpg" alt="sky5" class="w3-margin-top w3-margin-left" width="612" height="400">
+		
+	<br><br>
+	<div class="w3-text-grey">
+	<p align="center"><h1><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Live in the moment"</i></h1></p>
+	</div>
+	
+  <img src="sky4.jpg" alt="sky4" class="w3-margin-top" width="500" height="400">
+	<img src="sky7.jpg" alt="sky7" class="w3-margin-top" width="400" height="400">
+  <img src="sky6.jpg" alt="sky6" class="w3-margin-top" width="932" height="400">
+	</div>
+	
+	<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "20%";
+  document.getElementById("mySidebar").style.width = "20%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+	
+</body>
+</html>

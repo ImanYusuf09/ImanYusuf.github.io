@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="anya-32x32.png">	
+
+	<script>
+	function validateForm()
+     {	
+		 if((document.myform.rating[0].checked == false) && (document.myform.rating[1].checked == false) && (document.myform.rating[2].checked == false) && (document.myform.rating[3].checked == false) && (document.myform.rating[4].checked == false))
+	{
+	alert('Please rate this website.');
+	valid=false;
+	} else { alert("Thank you :)")}}
+		
+		if (document.myform.student.selectedIndex==0)
+	{
+	alert('Please select student or not a student');
+	valid=false;
+	}
+	 } else {alert("Thank you :)"}}
+	</script>
+
+	<!--dropdown-->
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+	
+</head>
+
+<body>
+	
+	<!--navbar-->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-xlarge"
+  onclick="w3_close()">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  
+	<div class="dropdown">
+  <a href="About2.html" class="w3-bar-item w3-button">About</a>
+     <div class="dropdown-content">
+     <a href="About2.html#Biodata">Biodata</a>
+     <a href="About2.html#Education">Education</a>
+     <a href="About2.html#Fun Facts">Fun Facts</a>
+    </div>
+</div>
+	
+	<a href="Gallery.html" class="w3-bar-item w3-button">Gallery</a>
+  <a href="Feedback.html" class="w3-bar-item w3-button">Feedback</a>
+</div>
+
+<div id="main">
+	
+<div class="w3-black">
+  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+ </div>
+</div>
+</div>
+	
+	  <!-- Feedback Section -->
+  <div class="w3-container w3-padding-32" id="feedback">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Feedback</h3>
+    <p>Your thought about this website?</p>
+	  
+	  <form name="myform" action="php.php"  method="POST" onsubmit="return validateForm()" target="_blank">
+		  
+      <input class="w3-border w3-input w3-border-black" type="text" placeholder="Name" required name="Name">
+      <input class="w3-border-black w3-input w3-section w3-border-black" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border-black" type="text" placeholder="Comment" required name="Comment">
+ 
+	  <!-- select -->
+		  <br><p>Are you a student?</p>
+          <select name="student">
+          <option value="Student">Student</option>
+          <option value="notaStudent">Not a student</option>
+          </select>
+		  
+  <!-- radio-->
+		  <br><p>Rate this website! :)</p>
+     
+  <input type="radio" id="5" name="rating" value="5 star">
+  <label for="5">5 star</label><br>
+  <input type="radio" id="css" name="rating" value="4 star">
+  <label for="4">4 star</label><br>
+  <input type="radio" id="3" name="rating" value="3 star">
+  <label for="3">3 star</label><br>
+  <input type="radio" id="2 star" name="rating" value="2 star">
+  <label for="2">2 star</label><br>
+  <input type="radio" id="1" name="rating" value="1 star">
+  <label for="1">1 star</label><br>
+<br>	  
+
+
+	  
+	    <button class="w3-button w3-black w3-section-black" type="submit" name="submit" value="SUBMIT">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+	
+	
+	
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "20%";
+  document.getElementById("mySidebar").style.width = "20%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+	
+</body>
+</html>
